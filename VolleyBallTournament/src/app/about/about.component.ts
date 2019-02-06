@@ -12,4 +12,8 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 
+  backToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
 }

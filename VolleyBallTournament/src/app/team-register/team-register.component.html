@@ -1,3 +1,40 @@
-<p>
-  team-register works!
-</p>
+<div class="main-content">
+  <div class="team-register-banner">
+    <h2 class="team-register-title text-white">Enter your team here</h2>
+  </div>
+
+  <form (submit)="onFormSubmit($event)">
+    <dx-form
+      class="team-register-form text-blue"
+      [(formData)]="team"
+      [showColonAfterLabel]="true"
+      [width]="600">
+
+      <dxi-item dataField="player1">
+        <dxi-validation-rule
+          type="required"
+          message="Player 1 is required!">
+        </dxi-validation-rule>
+      </dxi-item>
+      <dxi-item dataField="player2">
+        <dxi-validation-rule
+          type="required"
+          message="Player 2 is required!">
+        </dxi-validation-rule>
+      </dxi-item>
+      <dxi-item dataField="teamName">
+        <dxi-validation-rule
+          type="required"
+          message="Team name is required!">
+        </dxi-validation-rule>
+      </dxi-item>
+
+      <dxi-item
+        itemType="button"
+        horizontalAlignment="center"
+        [buttonOptions]="buttonOptions">
+
+      </dxi-item>
+    </dx-form>
+  </form>
+</div>

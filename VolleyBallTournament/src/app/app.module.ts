@@ -11,6 +11,10 @@ import { AboutComponent } from './about/about.component';
 import { MediaComponent } from './media/media.component';
 import { MatchesComponent } from './matches/matches.component';
 import { NavComponent } from './nav/nav.component';
+import { GalleryModule } from '@ngx-gallery/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import 'hammerjs';
+import { DxDataGridModule, DxFormModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { NavComponent } from './nav/nav.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GalleryModule,
+    BrowserAnimationsModule,
+    DxDataGridModule,
+    DxFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
