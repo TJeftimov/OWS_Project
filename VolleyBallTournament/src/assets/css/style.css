@@ -68,7 +68,7 @@
   margin-bottom: 80px;
 }
 
-.team-register-title {
+.form-component-title {
   font-family: 'Bangers', cursive;
   font-size: 90px;
 }
@@ -76,6 +76,11 @@
 .dx-field-item-label-text {
   color: #1565C0 !important;
   font-family: 'Bree Serif', serif;
+}
+
+.standings-group-title {
+  font-family: 'Bangers', cursive;
+  font-size: 48px;
 }
 
 .text-blue {
@@ -96,7 +101,7 @@
   height: 100%;
   width: 160px;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   top: 0;
   left: 0;
   background-color: #F0C419;
@@ -137,6 +142,40 @@
   bottom: 80px;
   right: 5px;
   transform: rotate(270deg);
+}
+
+.mobile-nav-button {
+  color:white;
+  background: #1565C0;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  z-index: 6;
+}
+
+.fas {
+  font-size: 48px;
+  margin-left: 4px;
+}
+
+.mobile-top {
+  z-index: 1;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #F0C419
+}
+
+.show-mobile-nav {
+  margin-left: 0 !important;
+  width: 100%;
 }
 
 /* HOME */
@@ -330,9 +369,9 @@
   cursor: pointer;
 }
 
-/* MEDIA */
+/* GALLERY */
 
-.media-gallery{
+.gallery{
   height: 937px;
   margin-left: 160px;
 }
@@ -362,7 +401,7 @@
 
 .team-register-banner {
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/images/teammates.jpg');
-  height: 500px;
+  height: 400px;
   background-position: center;
   display: flex;
   justify-content: center;
@@ -372,5 +411,256 @@
 .team-register-form {
   margin-left: 100px;
   margin-top: 80px;
+  width: 600px;
 }
 
+/* STANDINGS */
+
+.standings-groups {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 140px;
+}
+
+.standings-group {
+  width: 500px;
+}
+
+/* TICKET BUYING */
+
+.ticket-buying-banner {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/images/ticketsImage.jpg');
+  height: 400px;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-buying-form {
+  margin-left: 100px;
+  margin-top: 30px;
+  width: 600px;
+}
+
+@media only screen and (max-width: 850px) {
+  .sidenav {
+    margin-left: -160px;
+  }
+
+  .mobile-home-link {
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    margin-left: -95px;
+  }
+
+  .home-link {
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+  }
+
+  .main-content {
+    margin-top: 50px;
+    margin-left: 0;
+  }
+
+  .back-to-top {
+    display: none;
+  }
+
+  .banner {
+    height: 300px;
+  }
+
+  .banner h1 {
+    width: 100%;
+    margin-left: 15%;
+  }
+
+  .main-title {
+    font-size: 24px;
+  }
+
+  .banner-buttons {
+    margin-right: 0px;
+    width: 100%;
+    margin-bottom: 0
+  }
+
+  .button-yellow {
+    padding: 10px;
+  }
+
+  .button-text {
+    font-size: 12px;
+  }
+
+  .get-tickets {
+    height: 200px;
+  }
+
+  .ticket-text {
+    margin: 0;
+  }
+
+  .ticket-text p {
+    margin: 0;
+  }
+
+  .main-text {
+    font-size: 14px;
+  }
+
+  .ticket-image {
+    height: 100px;
+  }
+
+  .button-blue {
+    padding: 10px;
+  }
+
+  .teams-and-matches {
+    height: 200px;
+  }
+
+  .teams-and-matches-image {
+    height: 100px;
+  }
+
+  .teams-and-matches-buttons {
+    margin: 0;
+  }
+
+  .button-text-24 {
+    font-size: 10px;
+  }
+
+  .button-yellow-smaller {
+    padding: 10px;
+  }
+
+  .media {
+    height: 200px;
+  }
+
+  .media-text {
+    margin: 0;
+    top: 0;
+  }
+
+  .main-text-60 {
+    font-size: 18px;
+  }
+
+  .whacky-images-one {
+    left: 15px;
+    margin-top: 65px;
+    height: 70px;
+  }
+  .whacky-images-two {
+    z-index: 1;
+    left: 25px;
+    margin-top: 95px;
+    height: 80px;
+  }
+  .whacky-images-three {
+    z-index: 2;
+    left: 100px;
+    margin-top: 75px;
+    height: 80px;
+  }
+  .whacky-images-four {
+    z-index: 1;
+    right: 40px;
+    margin-top: 105px;
+    height: 80px;
+  }
+  .whacky-images-five {
+    z-index: 1;
+    right: 130px;
+    margin-top: 95px;
+    height: 70px;
+  }
+  .whacky-images-six {
+    z-index: 0;
+    left: 100px;
+    height: 60px;
+    margin-top: 60px;
+  }
+  .whacky-images-seven {
+    z-index: 0;
+    right: 140px;
+    margin-top: 50px;
+    height: 70px;
+  }
+  .whacky-images-eight {
+    z-index: 0;
+    right: 50px;
+    height: 70px;
+    margin-top: 60px;
+  }
+
+  .about {
+    height: 200px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    -webkit-text-stroke: 0.5px black;
+  }
+
+  .the-creator {
+    height: 150px;
+  }
+
+  .ticket-buying-banner {
+    height: 200px;
+  }
+
+  .form-component-title {
+    font-size: 38px;
+  }
+
+  .ticket-buying-form {
+    margin-left: 10px;
+    margin-top: 30px;
+    width: 90%;
+  }
+
+  .team-register-banner {
+    height: 200px;
+  }
+
+  .team-register-form {
+    margin-left: 10px;
+    margin-top: 30px;
+    width: 90%;
+  }
+
+  .standings-groups {
+    flex-direction: column;
+    align-items: center;
+    margin: 0
+  }
+
+  .standings-group {
+    width: 90%;
+  }
+
+  .gallery {
+    margin-top: 50px;
+    margin-left: 0;
+    height: 500px;
+  }
+
+  .about-article-image {
+    height: 100px;
+  }
+
+  .about-article-title {
+    margin: 0;
+  }
+}

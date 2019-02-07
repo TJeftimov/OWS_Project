@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import notify from 'devextreme/ui/notify';
-
-export class Team {
-  player1: string;
-  player2: string;
-  teamName: string;
-}
+import { TeamService, Team } from '../services/team.service';
 
 @Component({
   selector: 'app-team-register',
@@ -22,24 +17,24 @@ export class TeamRegisterComponent implements OnInit {
     useSubmitBehavior: true
   };
 
-  constructor() { }
+  constructor(
+    private teamService: TeamService
+  ) { }
 
   ngOnInit() {
   }
 
   onFormSubmit(e) {
+    const message = this.teamService.addTeam(this.team);
     notify(
-      { message: 'You have successfully registered your team, ' + this.team.teamName,
-      position: {
-        my: 'right',
-        at: 'right',
-        offset: '-150 200'
-      } },
+      { message: message},
       'success',
       3000
     );
 
     e.preventDefault();
+
+    this.team = new Team();
   }
 
 }

@@ -1,3 +1,56 @@
-<p>
-  standings works!
-</p>
+<div class="main-content">
+  <div class="standings-groups">
+
+    <div class="standings-group">
+      <h2 class="standings-group-title text-blue">Group A</h2>
+      <dx-data-grid
+        [dataSource]="groupATeams">
+        <dxi-column dataField="player1"></dxi-column>
+        <dxi-column dataField="player2"></dxi-column>
+        <dxi-column dataField="teamName"></dxi-column>
+        <dxi-column dataField="won"></dxi-column>
+        <dxi-column dataField="lost"></dxi-column>
+      </dx-data-grid>
+    </div>
+
+    <div class="standings-group">
+      <h2 class="standings-group-title text-blue">Group B</h2>
+      <dx-data-grid
+        [dataSource]="groupBTeams">
+        <dxi-column dataField="player1"></dxi-column>
+        <dxi-column dataField="player2"></dxi-column>
+        <dxi-column dataField="teamName"></dxi-column>
+        <dxi-column dataField="won"></dxi-column>
+        <dxi-column dataField="lost"></dxi-column>
+      </dx-data-grid>
+    </div>
+  </div>
+
+  <div class="standings-groups">
+
+    <div class="standings-group">
+      <h2 class="standings-group-title text-blue">Group C</h2>
+      <dx-data-grid
+        [dataSource]="groupCTeams">
+        <dxi-column dataField="player1"></dxi-column>
+        <dxi-column dataField="player2"></dxi-column>
+        <dxi-column dataField="teamName"></dxi-column>
+        <dxi-column dataField="won"></dxi-column>
+        <dxi-column dataField="lost"></dxi-column>
+      </dx-data-grid>
+    </div>
+
+    <div class="standings-group">
+      <h2 class="standings-group-title text-blue">Group D</h2>
+      <dx-data-grid
+        [dataSource]="groupDTeams">
+        <dxi-column dataField="player1"></dxi-column>
+        <dxi-column dataField="player2"></dxi-column>
+        <dxi-column dataField="teamName"></dxi-column>
+        <dxi-column dataField="won"></dxi-column>
+        <dxi-column dataField="lost"></dxi-column>
+      </dx-data-grid>
+    </div>
+
+  </div>
+</div>

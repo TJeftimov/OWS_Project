@@ -1,3 +1,57 @@
-<p>
-  ticket-buying works!
-</p>
+<div class="main-content">
+  <div class="ticket-buying-banner">
+    <h2 class="form-component-title text-white">Grab your tickets here</h2>
+  </div>
+
+  <form (submit)="onFormSubmit($event)">
+      <dx-form
+        class="ticket-buying-form text-blue"x
+        [showColonAfterLabel]="true">
+
+        <dxi-item
+          dataField="Number of tickets"
+          editorType="dxSelectBox"
+          [editorOptions]="{ dataSource: ticketNumbers }">
+          <dxi-validation-rule
+            type="required"
+            message="Please select at least one ticket">
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item
+          dataField="Quadrant"
+          editorType="dxSelectBox"
+          [editorOptions]="{ dataSource: quadrants }">
+          <dxi-validation-rule
+            type="required"
+            message="Please select a quadrant">
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item dataField="Credit card number">
+          <dxi-validation-rule
+            type="required"
+            message="Can't get your tickets if you don't pay us">
+          </dxi-validation-rule>
+          <dxi-validation-rule
+            type="numeric"
+            message="Please enter numbers only">
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item dataField="e-mail">
+          <dxi-validation-rule
+            type="required"
+            message="We need your mail to send you your tickets">
+          </dxi-validation-rule>
+          <dxi-validation-rule
+            type="email"
+            message="Please enter a valid e-mail">
+          </dxi-validation-rule>
+        </dxi-item>
+
+        <dxi-item
+          itemType="button"
+          horizontalAlignment="center"
+          [buttonOptions]="buttonOptions">
+        </dxi-item>
+      </dx-form>
+    </form>
+</div>

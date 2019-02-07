@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TeamService, Team } from '../services/team.service';
 
 @Component({
   selector: 'app-standings',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StandingsComponent implements OnInit {
 
-  constructor() { }
+  public groupATeams: Team[];
+  public groupBTeams: Team[];
+  public groupCTeams: Team[];
+  public groupDTeams: Team[];
+
+  constructor(
+    private teamService: TeamService
+  ) { }
 
   ngOnInit() {
+    this.groupATeams = this.teamService.groupA;
+    this.groupBTeams = this.teamService.groupB;
+    this.groupCTeams = this.teamService.groupC;
+    this.groupDTeams = this.teamService.groupD;
   }
 
 }

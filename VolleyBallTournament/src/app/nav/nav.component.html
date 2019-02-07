@@ -1,4 +1,8 @@
-<div class="sidenav">
+<div *ngIf="mobile" class="mobile-nav-button"><i class="fas fa-bars"  (tapClick)="showOrHideNav()"></i></div>
+<div *ngIf="mobile" class="mobile-top">
+  <img class="mobile-home-link" src="/assets/images/volleyball.svg" routerLink="/">
+</div>
+<div class="sidenav" [ngClass]="{'show-mobile-nav' : show }">
   <ul>
     <li>
       <img class="home-link" src="/assets/images/volleyball.svg" routerLink="/">
@@ -13,7 +17,7 @@
       <a class="nav-link text-blue" routerLink="/standings">Teams & standings</a>
     </li>
     <li>
-      <a class="nav-link text-blue" routerLink="/matches">Matches</a>
+      <a class="nav-link text-blue" routerLink="/matches">Watch live</a>
     </li>
     <li>
       <a class="nav-link text-blue" routerLink="/media">Media</a>

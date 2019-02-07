@@ -1,14 +1,13 @@
 <div class="main-content">
   <div class="team-register-banner">
-    <h2 class="team-register-title text-white">Enter your team here</h2>
+    <h2 class="form-component-title text-white">Enter your team here</h2>
   </div>
 
   <form (submit)="onFormSubmit($event)">
     <dx-form
       class="team-register-form text-blue"
       [(formData)]="team"
-      [showColonAfterLabel]="true"
-      [width]="600">
+      [showColonAfterLabel]="true">
 
       <dxi-item dataField="player1">
         <dxi-validation-rule
